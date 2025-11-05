@@ -13,6 +13,9 @@ Actividad para comparar y evaluar técnicas de clasificación supervisada aplica
 - Incluir una breve descripción del dataset usado (columnas, tipo de variables, tamaño).
 - Indicar fuente o archivo local (p. ej. data/dataset.csv).
 - Recomendación: dividir en train/validation/test o usar validación cruzada.
+- Utilizamos el Dataset: 
+  Nombre: Server Logs - Suspicious
+  Enlace: https://www.kaggle.com/datasets/kartikjaspal/server-logs-suspicious
 
 ## Metodología
 1. Inspección y limpieza de datos (valores faltantes, duplicados, tipos).
