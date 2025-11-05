@@ -1,3 +1,21 @@
+### Métricas de evaluación
+- Accuracy
+- Precision, Recall, F1-score (por clase y macro/micro)
+- Matriz de confusión
+- ROC AUC (si corresponde)
+- Curvas de aprendizaje y validación
+
+### Requisitos
+Python 3.8+
+Instalar: pip install -r requirements.txt
+
+### Estructura del repositorio
+content/ -> dataset (raw)
+graphs/ -> gráficos de conclusión
+ClasificaciónTecnicaSVM_ArbolDecision_Grupo5.ipynb -> scripts y módulos
+README.md
+requirements.txt
+
 ### Resumen del problema
 
 El estudio tiene como objetivo desarrollar, entrenar y comparar clasificadores supervisados (específicamente **Máquinas de Vectores de Soporte (SVM)** y **Árboles de Decisión**) aplicados al **reconocimiento de patrones en datos reales o simulados**, como sensores, comportamiento de usuarios, métricas de rendimiento, entre otros. El propósito central es determinar la eficacia de estos modelos en la **detección de patrones anómalos** dentro de conjuntos de datos multivariados, donde las clases se agrupan en categorías tales como *normal*, *suspicious* y *unknown*.
