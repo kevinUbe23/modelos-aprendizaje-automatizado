@@ -6,15 +6,15 @@
 - Curvas de aprendizaje y validación
 
 ### Requisitos
-Python 3.8+
-Instalar: pip install -r requirements.txt
+- Python 3.8+
+- Instalar: pip install -r requirements.txt
 
 ### Estructura del repositorio
-content/ -> dataset (raw)
-graphs/ -> gráficos de conclusión
-ClasificaciónTecnicaSVM_ArbolDecision_Grupo5.ipynb -> scripts y módulos
-README.md
-requirements.txt
+- content/ -> dataset (raw)
+- graphs/ -> gráficos de conclusión
+- ClasificaciónTecnicaSVM_ArbolDecision_Grupo5.ipynb -> scripts y módulos
+- README.md
+- requirements.txt
 
 ### Resumen del problema
 
