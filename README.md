@@ -75,3 +75,25 @@ El proceso comparativo de los modelos supervisados evidencia que todos los clasi
 En conjunto, los resultados confirman que los modelos basados en **ensambles (Random Forest)** y **vectores de soporte** son los más adecuados para contextos con datos complejos, heterogéneos y desbalanceados. Asimismo, el pipeline de preprocesamiento implementado que incluye imputación, escalado y codificación categórica fue determinante para garantizar la homogeneidad de los datos y maximizar el desempeño de los clasificadores.
 
 La comparación final permite concluir que, si bien todos los enfoques alcanzan niveles de precisión aceptables, **Random Forest se posiciona como el modelo óptimo** para este tipo de problemas, equilibrando de forma efectiva la precisión, la estabilidad y la capacidad de interpretación de resultados.
+
+
+### Limitaciones
+
+Hoy los modelos funcionan muy bien en las pruebas, pero hay riesgos si los llevamos al “mundo real”. El principal: **las clases no están balanceadas**; si una aparece mucho más que las otras, el sistema puede “acostumbrarse” a verla y fallar justo con la menos frecuente. También existe **posible sobreajuste** (aprende demasiado el set de entrenamiento), **variables con demasiadas categorías** que complican el aprendizaje, y **cambios en los datos con el tiempo** que podrían bajar el desempeño. Finalmente, **las probabilidades que entregan algunos modelos no siempre son confiables**, lo que dificulta fijar umbrales claros para alertas.
+
+* Cuando mezclamos datos de una misma “fuente” en entrenamiento y prueba, las métricas pueden verse mejor de lo que realmente son.
+* Si el costo de equivocarse no es el mismo para todas las clases (por ejemplo, pasar por alto un “sospechoso”), las métricas generales pueden engañar.
+* Lo que hoy rinde excelente en este dataset podría no rendir igual en otro entorno sin ajustes.
+
+---
+
+### Sugerencias — claras y accionables
+
+**1) Validar mejor antes de decidir**
+Separar datos por tiempo o por “fuente” (por ejemplo, por equipo/cliente) para evitar fugas entre entrenamiento y prueba. Además de exactitud y F1, mirar **curvas de precisión–recuperación** y **matrices de confusión** para entender errores críticos.
+
+**2) Atender el desbalance**
+Dos caminos simples: **ponderar** más los casos raros o **re-muestrear** (equilibrar las clases). Luego, ajustar el **umbral de decisión** según el riesgo de cada tipo de error.
+
+**3) Simplificar variables difíciles**
+En lugar de convertir en cientos de columnas los campos con muchos valores (p. ej., direcciones o “flags”), agruparlos por familias o rangos (subredes, grupos de señales) o convertirlos a recuentos/frecuencias. Menos ruido, más estabilidad.
