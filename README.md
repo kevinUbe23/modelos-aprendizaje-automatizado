@@ -91,9 +91,11 @@ Hoy los modelos funcionan muy bien en las pruebas, pero hay riesgos si los lleva
 
 **1) Validar mejor antes de decidir**
 Separar datos por tiempo o por “fuente” (por ejemplo, por equipo/cliente) para evitar fugas entre entrenamiento y prueba. Además de exactitud y F1, mirar **curvas de precisión–recuperación** y **matrices de confusión** para entender errores críticos.
-### Gracias Totales!!!
+
 **2) Atender el desbalance**
 Dos caminos simples: **ponderar** más los casos raros o **re-muestrear** (equilibrar las clases). Luego, ajustar el **umbral de decisión** según el riesgo de cada tipo de error.
 
 **3) Simplificar variables difíciles**
 En lugar de convertir en cientos de columnas los campos con muchos valores (p. ej., direcciones o “flags”), agruparlos por familias o rangos (subredes, grupos de señales) o convertirlos a recuentos/frecuencias. Menos ruido, más estabilidad.
+
+### Gracias Totales!!!
